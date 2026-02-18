@@ -1,0 +1,13 @@
+n = int(input("Enter the number of elements in the tuple: "))
+elements = input(f"Enter {n} elements separated by space: ").split()
+
+my_tuple = tuple(elements)
+
+index = int(input("Enter the index of the element you want to modify: "))
+
+new_value = input(f"Enter the new value for element at index {index}: ")
+
+modified_tuple = my_tuple[:index] + (new_value,) + my_tuple[index + 1:]
+
+print("Original Tuple:", my_tuple)
+print("Modified Tuple:", modified_tuple)
