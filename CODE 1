@@ -1,0 +1,19 @@
+n = int(input("Enter the number of students: "))
+
+students = []
+
+for i in range(n):
+    roll_no = int(input(f"Enter roll number of student {i+1}: "))
+    name = input(f"Enter name of student {i+1}: ")
+    age = int(input(f"Enter age of student {i+1}: "))
+    students.append((roll_no, name, age))
+
+roll_no, names, ages = zip(*students)
+
+roll_no = list(roll_no)
+names = list(names)
+ages = list(ages)
+
+print(f"Roll numbers: {roll_no}")
+print(f"Names: {names}")
+print(f"Ages: {ages}")
