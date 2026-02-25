@@ -1,16 +1,22 @@
-# Dictionary 1
-dict1 = {'a': 10, 'b': 20}
+# Function to create dictionary from user input
+def create_dict(n):
+    d = {}
+    for i in range(n):
+        key = input("Enter key: ")
+        value = int(input("Enter value: "))
+        d[key] = value
+    return d
 
-# Dictionary 2
-dict2 = {'c': 30, 'd': 40}
+n1 = int(input("How many elements in Dictionary 1? "))
+dict1 = create_dict(n1)
 
-# Dictionary 3
-dict3 = {'e': 50, 'f': 60}
+n2 = int(input("How many elements in Dictionary 2? "))
+dict2 = create_dict(n2)
 
-# Concatenating dictionaries
+n3 = int(input("How many elements in Dictionary 3? "))
+dict3 = create_dict(n3)
+
+# Concatenate dictionaries
 dict4 = {**dict1, **dict2, **dict3}
 
-print("Dictionary 1:", dict1)
-print("Dictionary 2:", dict2)
-print("Dictionary 3:", dict3)
 print("Concatenated Dictionary:", dict4)
