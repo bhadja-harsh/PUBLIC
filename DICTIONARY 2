@@ -1,0 +1,13 @@
+n = int(input("How many elements in dictionary? "))
+
+my_dict = {}
+
+for i in range(n):
+    key = input("Enter key: ")
+    value = input("Enter value: ")
+    my_dict[key] = value
+
+if not my_dict:
+    print("Dictionary is empty")
+else:
+    print("Dictionary is not empty")
