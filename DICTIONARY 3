@@ -1,0 +1,21 @@
+employees = {}
+
+num_dept = int(input("Enter number of departments: "))
+
+for i in range(num_dept):
+    dept_no = int(input("Enter Department number: "))
+    num_emp = int(input("Enter number of employees in this department: "))
+    
+    emp_list = []
+    for j in range(num_emp):
+        roll = int(input("Enter employee roll number: "))
+        salary = int(input("Enter salary: "))
+        emp_list.append((roll, salary))
+    
+    employees[dept_no] = emp_list
+
+for dept, emp_list in employees.items():
+    salaries = [salary for roll, salary in emp_list]
+    print(f"\nDepartment {dept}:")
+    print("Minimum Salary:", min(salaries))
+    print("Maximum Salary:", max(salaries))
