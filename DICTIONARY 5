@@ -1,0 +1,30 @@
+# Create dictionary for grocery items and their prices
+prices = {}
+n = int(input("Enter number of grocery items: "))
+
+for i in range(n):
+    item = input(f"\nEnter name of item {i+1}: ")
+    price = float(input(f"Enter price of {item}: "))
+    prices[item] = price
+
+# Create dictionary for grocery items and quantity purchased
+quantities = {}
+for i in range(n):
+    item = input(f"\nEnter name of item {i+1} for quantity: ")
+    qty = int(input(f"Enter quantity of {item}: "))
+    quantities[item] = qty
+
+# Calculate total bill
+total = 0
+for item in quantities:
+    if item in prices:
+        total += prices[item] * quantities[item]
+    else:
+        print(f"Warning: {item} not found in price list.")
+
+print("\n----- BILL DETAILS -----")
+for item in quantities:
+    if item in prices:
+        print(f"{item} : {quantities[item]} x {prices[item]} = {quantities[item] * prices[item]}")
+
+print("\nTotal Bill Amount =", total)
